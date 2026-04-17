@@ -12,6 +12,7 @@ jobs :
               run : echo "Hello world"
     job2:
         runs-on: windows-latest
+        needs: [job1]   
         steps:
             - name : my awesome step
               run : mkdir app
