@@ -11,7 +11,7 @@ jobs :
         runs-on: ubuntu-latest 
         steps: 
             - name : step 1
-              run : echo "Hello world"
+              run : echo "Hello world" ${secret.SECRET}
     job2:
         runs-on: windows-latest
         needs: [job1]   
